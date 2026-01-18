@@ -1,0 +1,121 @@
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.admin-card {
+  background: var(--color-bg-card);
+  border-radius: var(--admin-card-radius);
+  padding: 32px;
+  box-shadow: var(--admin-shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  border: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  cursor: pointer;
+}
+
+.admin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--admin-shadow-hover);
+  border-color: var(--color-secondary);
+}
+
+.admin-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.admin-card p {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+/* Admin Stats Section */
+.admin-stats-section {
+  margin: 40px 0;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.admin-stat-card {
+  background: var(--color-bg-card);
+  border-radius: var(--admin-card-radius);
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--admin-shadow);
+  border: 2px solid var(--color-border);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--admin-shadow-hover);
+  border-color: var(--color-secondary);
+}
+
+.admin-stat-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.admin-stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.admin-stat-label {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-stat-card-warning {
+  border-color: #F59E0B;
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+}
+
+.admin-stat-card-warning .admin-stat-value {
+  color: #D97706;
+}
+
+.admin-stat-card-warning:hover {
+  border-color: #D97706;
+}
+
+.admin-management-section {
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .admin-grid,
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

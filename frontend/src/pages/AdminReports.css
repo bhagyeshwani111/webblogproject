@@ -1,0 +1,91 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.admin-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.reports-table-container {
+  overflow-x: auto;
+  background: var(--color-bg-card);
+  border-radius: var(--admin-card-radius);
+  box-shadow: var(--admin-shadow);
+  border: 1px solid var(--color-border);
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reports-table thead {
+  background-color: var(--color-bg-light);
+}
+
+.reports-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.reports-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  font-size: 14px;
+}
+
+.reports-table tbody tr:hover {
+  background-color: var(--color-bg-light);
+}
+
+.report-reason {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-reports {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--color-bg-card);
+  border-radius: var(--admin-card-radius);
+  box-shadow: var(--admin-shadow);
+  border: 1px solid var(--color-border);
+}
+
+.no-reports p {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .reports-table-container {
+    font-size: 12px;
+  }
+
+  .reports-table th,
+  .reports-table td {
+    padding: 8px;
+  }
+
+  .report-reason {
+    max-width: 150px;
+  }
+}
+

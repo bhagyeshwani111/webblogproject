@@ -1,0 +1,18 @@
+.category-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #E0E7FF;
+  color: #3730A3;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.category-badge:hover {
+  background-color: #C7D2FE;
+  transform: translateY(-1px);
+}
+

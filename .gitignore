@@ -1,0 +1,30 @@
+# =====================
+# Backend (Spring Boot)
+# =====================
+backend/target/
+target/
+.classpath
+.project
+.settings/
+*.log
+
+# =====================
+# Frontend (React)
+# =====================
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# =====================
+# Environment & Secrets
+# =====================
+.env
+
+# =====================
+# IDE / OS Files
+# =====================
+.idea/
+.vscode/
+.DS_Store
+*.log
+

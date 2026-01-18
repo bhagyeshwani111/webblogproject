@@ -1,0 +1,139 @@
+.app-footer {
+  position: relative;
+  margin-top: 60px;
+  background: #3B2F2F;
+  color: #F5F5F4;
+  overflow: hidden;
+}
+
+.app-footer-wave {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 200%;
+  height: 80px;
+  background: radial-gradient(circle at 50% 0, rgba(255, 255, 255, 0.35), transparent 60%);
+  opacity: 0.6;
+  animation: footer-wave 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes footer-wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.app-footer-content {
+  position: relative;
+  padding: 40px 20px 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 32px;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.app-footer-brand h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.app-footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.app-footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.app-footer-column h4 {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.app-footer-column a {
+  display: block;
+  font-size: 14px;
+  color: #F5F5F4;
+  text-decoration: none;
+  margin-bottom: 6px;
+  opacity: 0.85;
+  position: relative;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.app-footer-column a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: width 0.25s ease;
+}
+
+.app-footer-column a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.app-footer-column a:hover::after {
+  width: 100%;
+}
+
+.app-footer-bottom {
+  grid-column: 1 / -1;
+  padding-top: 16px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app-footer-top-btn {
+  background: rgba(245, 245, 244, 0.1);
+  color: #F5F5F4;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  border: 1px solid rgba(245, 245, 244, 0.25);
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.app-footer-top-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .app-footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .app-footer-links {
+    justify-content: flex-start;
+  }
+}
+
+

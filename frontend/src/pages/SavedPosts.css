@@ -1,0 +1,34 @@
+.saved-posts-page {
+  padding: 40px 0;
+}
+
+.saved-posts-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 32px;
+}
+
+.saved-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.no-saved-posts {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.no-saved-posts p {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .saved-posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
